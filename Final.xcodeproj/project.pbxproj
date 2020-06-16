@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4338F02B2495DD5600EDCE41 /* BusList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4338F02A2495DD5600EDCE41 /* BusList.swift */; };
+		4338F02D2495DDF400EDCE41 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4338F02C2495DDF400EDCE41 /* Bus.swift */; };
+		4378040324985EE30008E9C6 /* BusEstimatedTimeOfArrival.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378040224985EE30008E9C6 /* BusEstimatedTimeOfArrival.swift */; };
+		43780405249866110008E9C6 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780404249866110008E9C6 /* AppView.swift */; };
+		4378040824986D060008E9C6 /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 4378040724986D060008E9C6 /* SwiftUIPullToRefresh */; };
+		4378040A249877C70008E9C6 /* BusTimeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780409249877C70008E9C6 /* BusTimeRow.swift */; };
+		4378040C2498868F0008E9C6 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378040B2498868F0008E9C6 /* ImagePickerController.swift */; };
+		4378040E249887940008E9C6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378040D249887940008E9C6 /* ImagePicker.swift */; };
 		43B6D58D247E0DD6009AD2E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B6D58C247E0DD6009AD2E8 /* AppDelegate.swift */; };
 		43B6D58F247E0DD6009AD2E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B6D58E247E0DD6009AD2E8 /* SceneDelegate.swift */; };
 		43B6D591247E0DD6009AD2E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B6D590247E0DD6009AD2E8 /* ContentView.swift */; };
@@ -16,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4338F02A2495DD5600EDCE41 /* BusList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusList.swift; sourceTree = "<group>"; };
+		4338F02C2495DDF400EDCE41 /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
+		4378040224985EE30008E9C6 /* BusEstimatedTimeOfArrival.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusEstimatedTimeOfArrival.swift; sourceTree = "<group>"; };
+		43780404249866110008E9C6 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		43780409249877C70008E9C6 /* BusTimeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTimeRow.swift; sourceTree = "<group>"; };
+		4378040B2498868F0008E9C6 /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
+		4378040D249887940008E9C6 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		43B6D589247E0DD6009AD2E8 /* Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B6D58C247E0DD6009AD2E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43B6D58E247E0DD6009AD2E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4378040824986D060008E9C6 /* SwiftUIPullToRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,13 +72,20 @@
 		43B6D58B247E0DD6009AD2E8 /* Final */ = {
 			isa = PBXGroup;
 			children = (
+				43780404249866110008E9C6 /* AppView.swift */,
 				43B6D58C247E0DD6009AD2E8 /* AppDelegate.swift */,
 				43B6D58E247E0DD6009AD2E8 /* SceneDelegate.swift */,
 				43B6D590247E0DD6009AD2E8 /* ContentView.swift */,
+				4338F02A2495DD5600EDCE41 /* BusList.swift */,
+				4378040224985EE30008E9C6 /* BusEstimatedTimeOfArrival.swift */,
+				43780409249877C70008E9C6 /* BusTimeRow.swift */,
+				4338F02C2495DDF400EDCE41 /* Bus.swift */,
 				43B6D592247E0DD8009AD2E8 /* Assets.xcassets */,
 				43B6D597247E0DD8009AD2E8 /* LaunchScreen.storyboard */,
 				43B6D59A247E0DD8009AD2E8 /* Info.plist */,
 				43B6D594247E0DD8009AD2E8 /* Preview Content */,
+				4378040B2498868F0008E9C6 /* ImagePickerController.swift */,
+				4378040D249887940008E9C6 /* ImagePicker.swift */,
 			);
 			path = Final;
 			sourceTree = "<group>";
@@ -91,6 +114,9 @@
 			dependencies = (
 			);
 			name = Final;
+			packageProductDependencies = (
+				4378040724986D060008E9C6 /* SwiftUIPullToRefresh */,
+			);
 			productName = Final;
 			productReference = 43B6D589247E0DD6009AD2E8 /* Final.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +145,9 @@
 				Base,
 			);
 			mainGroup = 43B6D580247E0DD6009AD2E8;
+			packageReferences = (
+				4378040624986D050008E9C6 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */,
+			);
 			productRefGroup = 43B6D58A247E0DD6009AD2E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,8 +176,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B6D58D247E0DD6009AD2E8 /* AppDelegate.swift in Sources */,
+				4378040C2498868F0008E9C6 /* ImagePickerController.swift in Sources */,
 				43B6D58F247E0DD6009AD2E8 /* SceneDelegate.swift in Sources */,
+				4338F02B2495DD5600EDCE41 /* BusList.swift in Sources */,
+				43780405249866110008E9C6 /* AppView.swift in Sources */,
+				4378040A249877C70008E9C6 /* BusTimeRow.swift in Sources */,
 				43B6D591247E0DD6009AD2E8 /* ContentView.swift in Sources */,
+				4378040E249887940008E9C6 /* ImagePicker.swift in Sources */,
+				4338F02D2495DDF400EDCE41 /* Bus.swift in Sources */,
+				4378040324985EE30008E9C6 /* BusEstimatedTimeOfArrival.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4378040624986D050008E9C6 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/phuhuynh2411/SwiftUI-PullToRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4378040724986D060008E9C6 /* SwiftUIPullToRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4378040624986D050008E9C6 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */;
+			productName = SwiftUIPullToRefresh;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43B6D581247E0DD6009AD2E8 /* Project object */;
 }

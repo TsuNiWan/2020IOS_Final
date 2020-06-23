@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Final
+
+  Created by 林子平 on 2020/6/23.
+  Copyright © 2020 林子平. All rights reserved.
+*/
+"busInfo" = "Bus Info";
+"myFavorite" = "Favorite";
+"picSelect" = "Picture";
+"busSelect" = "Search Bus";
+"like" = "Like";
+"dislike" = "DisLike";
+"departure" = "Departure";
+"return" = "Return";
+"remove" = "This Bus will remove from your favorite list";
+"picture" = "Select Picture";
+"add" = "This Bus will add to your favorite list";

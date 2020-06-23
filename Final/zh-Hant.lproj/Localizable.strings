@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Final
+
+  Created by 林子平 on 2020/6/23.
+  Copyright © 2020 林子平. All rights reserved.
+*/
+"busInfo" = "公車資訊";
+"myFavorite" = "我的收藏";
+"picSelect" = "圖片選擇";
+"busSelect" = "搜尋公車";
+"like" = "喜歡";
+"dislike" = "不喜歡";
+"departure" = "去程";
+"return" = "返程";
+"remove" = "此公車將從您的最愛移除";
+"picture" = "圖片挑選";
+"add" = "此公車將從加入您的最愛";

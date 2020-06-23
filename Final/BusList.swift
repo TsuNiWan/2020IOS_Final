@@ -10,7 +10,14 @@ import SwiftUI
 import CryptoKit
 
 struct BusList: View {
+    @EnvironmentObject var busFavorite: BusFavorite
     @State private var bus = [Bus]()
+    @State private var searchText : String = ""
+    
+    var localize = Bundle.main.preferredLocalizations.first
+    var filteredBus: [Bus] {
+        return bus.filter { self.searchText.isEmpty ? true : $0.RouteUID.lowercased().contains(searchText.lowercased()) }
+    }
     
     func getTimeString() -> String {
         let dateFormater = DateFormatter()
@@ -51,16 +58,31 @@ struct BusList: View {
     }
     
     var body: some View {
-        List(bus.indices, id: \.self) { (index)  in
-            Text(self.bus[index].RouteUID)
-            Spacer()
-            Text(self.bus[index].RouteName.Zh_tw)
-        }
-        .onAppear {
-            self.fetchData()
+        NavigationView {
+            VStack {
+                SearchBar(text: self.$searchText, placeholder: NSLocalizedString("busSelect", comment: ""))
+                if localize == "zh-Hant" {
+                    List(filteredBus.indices, id: \.self) { (index)  in
+                        NavigationLink(destination: BusEstimatedTimeOfArrival(routeUID: self.filteredBus[index].RouteUID, routeID: self.filteredBus[index].RouteID, routeName: self.filteredBus[index].RouteName)){
+                            Text(self.filteredBus[index].RouteName.Zh_tw)
+                        }
+                    }
+                } else {
+                    List(filteredBus.indices, id: \.self) { (index)  in
+                        NavigationLink(destination: BusEstimatedTimeOfArrival(routeUID: self.filteredBus[index].RouteUID, routeID: self.filteredBus[index].RouteID, routeName: self.filteredBus[index].RouteName)) {
+                            Text(self.filteredBus[index].RouteName.En)
+                        }
+                    }
+                }
+            }
+            .onAppear {
+                self.fetchData()
+            }
+            .navigationBarTitle(NSLocalizedString("busInfo", comment: ""))
         }
     }
 }
+
 
 struct BusList_Previews: PreviewProvider {
     static var previews: some View {

@@ -10,19 +10,44 @@ import SwiftUI
 
 struct BusTimeRow: View {
     var bus:BusTime
+    var localize = Bundle.main.preferredLocalizations.first
+    
     var body: some View {
         HStack {
-            if bus.EstimateTime != nil{
-                Text(bus.StopName.Zh_tw)
-                Spacer()
-                Text("\(bus.EstimateTime!/60) 分鐘")
+            if localize == "zh-Hant" {
+                if bus.EstimateTime != nil{
+                    Text(bus.StopName.Zh_tw)
+                    Spacer()
+                    if bus.EstimateTime!/60 < 3{
+                        Text("即將進站")
+                            .foregroundColor(.red)
+                    } else{
+                        Text("\(bus.EstimateTime!/60) 分鐘")
+                    }
+                } else {
+                    Text(bus.StopName.Zh_tw)
+                    Spacer()
+                    Text("未發車")
+                }
             } else {
-                Text(bus.StopName.Zh_tw)
-                Spacer()
-                Text("未發車")
+                if bus.EstimateTime != nil{
+                    Text(bus.StopName.En)
+                    Spacer()
+                    if bus.EstimateTime!/60 < 3{
+                        Text("Coming Soon")
+                            .foregroundColor(.red)
+                    } else{
+                        Text("\(bus.EstimateTime!/60) Min")
+                    }
+                } else {
+                    Text(bus.StopName.En)
+                    Spacer()
+                    Text("At Depot")
+                }
             }
         }
         .padding()
+        
     }
 }
 

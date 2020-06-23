@@ -9,29 +9,32 @@
 import SwiftUI
 
 struct AppView: View {
+    @EnvironmentObject var busFavorite: BusFavorite
+    
     var body: some View {
         TabView {
             BusList()
                 .tabItem {
-                    Image(systemName: "square.and.pencil")
-                    Text("測試")
-            }
-            BusEstimatedTimeOfArrival(title: "104 新豐街-經中正路", routeUID: "KEE1041")
-                .tabItem {
                     Image(systemName: "clock")
-                    Text("到站時間")
+                    Text(NSLocalizedString("busInfo", comment: ""))
             }
-            ImagePicker()
+            BusFavoriteList()
+                .tabItem {
+                    Image(systemName: "heart.circle")
+                    Text(NSLocalizedString("myFavorite", comment: ""))
+            }
+            OtherFunction()
                 .tabItem {
                     Image(systemName: "photo")
-                    Text("圖片挑選")
+                    Text(NSLocalizedString("picSelect", comment: ""))
             }
         }
+        .environmentObject(busFavorite)
     }
 }
 
 struct AppView_Previews: PreviewProvider {
     static var previews: some View {
-        AppView()
+        AppView().environmentObject(BusFavorite())
     }
 }

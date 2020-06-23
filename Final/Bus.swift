@@ -8,15 +8,13 @@
 
 import Foundation
 
-struct BusTime: Codable {
+struct BusTime: Codable, Identifiable {
+    let id = UUID()
     let StopUID, StopID: String
     let StopName: Name
     let RouteUID: String
     let RouteID: String
     let RouteName: Name
-    //let SubRouteUID: String
-    //let SubRouteID: String
-    //let SubRouteName: Name
     let StopSequence: Int?
     let Direction, StopStatus, MessageType: Int
     let SrcUpdateTime, UpdateTime: Date
@@ -27,22 +25,31 @@ struct Name: Codable {
     let Zh_tw, En: String
 }
 
-struct Bus: Codable {
+struct Bus: Codable, Identifiable{
+    let id = UUID()
     let RouteUID, RouteID: String
-    //let operators: [Operator]
     let AuthorityID, ProviderID: String
     let BusRouteType: Int
     let RouteName: Name
-    let DepartureStopNameZh, DepartureStopNameEn: String
-    let DestinationStopNameZh, DestinationStopNameEn, TicketPriceDescriptionZh: String
-    let City, CityCode: String
+    //let DepartureStopNameZh, DepartureStopNameEn: String
+    //let DestinationStopNameZh, DestinationStopNameEn: String
+    //let City, CityCode: String
     let UpdateTime: Date
-    let VersionID: Int
+    //let VersionID: Int
 }
 
-struct Operator: Codable {
-    let OperatorID: String
-    let OperatorName: Name
-    let OperatorCode: String
-    let OperatorNo: String
+struct BusFavoriteData: Codable, Identifiable{
+    let id = UUID()
+    let RouteUID, RouteID: String
+    let RouteName: Name
+}
+
+struct Position: Codable {
+    let PositionLat, PositionLon: Double
+}
+
+struct BusStopPosition: Codable {
+    let StopUID, StopID: String
+    let StopName: Name
+    let StopPosition: Position
 }
